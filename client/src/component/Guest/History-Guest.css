@@ -1,0 +1,9 @@
+@media screen and (max-width: 992px){
+    .num{
+        display: none;
+    }
+}
+
+.num{
+    color: #282c34;
+}

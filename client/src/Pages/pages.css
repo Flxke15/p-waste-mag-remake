@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+body{
+    /*background: whitesmoke;*/
+    background: whitesmoke;
+    font-family: 'Kanit', sans-serif;
+}
+
+.profile-box{
+    border-style: solid;
+    border-color: #282c34;
+    border-width: 1px;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.col{
+    padding: 20px;
+}
+
+
+/*adminCss*/
+.admin-point{
+    /*font-family: 'Inconsolata', monospace;*/
+    font-family: 'Kanit', sans-serif;
+}
+
+.mySwiper{
+    width: 600px;
+    height: 350px;
+}
+
+@media screen and (max-width: 767px){
+    .mySwiper{
+        width: 300px;
+        height: 150px;
+    }
+}
