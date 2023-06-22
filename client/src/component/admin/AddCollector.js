@@ -1,6 +1,5 @@
 import React, {useState,useEffect} from "react";
-import Navbar from "../component/navbar";
-import Footer from "../component/footer";
+import Navbar from "../navbar";
 import axios, {get} from "axios";
 import Swal from "sweetalert2";
 import {Routes, Route, useNavigate} from 'react-router-dom';
@@ -80,7 +79,7 @@ function AddUser(){
                 title : 'กรุณากรอกข้อมูลให้ครบ'
             })
         }else {
-            axios.post('http://localhost:3001/adduser', {
+            axios.post('http://localhost:3001/addcollector', {
                 surname : surname,
                 lastname : lastname,
                 uid : uid,
@@ -123,7 +122,7 @@ function AddUser(){
         <div>
             <Navbar/>
             <div className='App container'>
-                <h1>Add User</h1>
+                <h1>Add collector</h1>
                 <a role='button' className='btn btn-primary' onClick={backMain} style={{marginTop:'20px'}}>Back to home</a>
                 <div className='adduser' style={{marginTop:'50px'}}>
                     <form action='' >

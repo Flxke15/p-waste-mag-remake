@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56279a26-0fce-4f1d-a4e4-6d07b09784fa" name="Changes" comment="" />
+    <list default="true" id="56279a26-0fce-4f1d-a4e4-6d07b09784fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Pages/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/AddUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-owner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-owner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/Guest/History-Guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Guest/History-Guest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/History.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/PointOther.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/PointOther.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/admin/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/admin/Point.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/component/owner/AddAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/owner/AddAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +42,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/f1uke/Documents/Project Waste Management/p-wasteMag-21june",
+    "last_opened_file_path": "/Users/f1uke/Documents/Project Waste Management/p-wasteMag-ver2/client/src/component/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -38,6 +51,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/component/admin" />
+      <recent name="$PROJECT_DIR$/client/src/component/owner" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,6 +69,9 @@
       <workItem from="1687332057145" duration="10939000" />
       <workItem from="1687421120862" duration="436000" />
       <workItem from="1687422521922" duration="43000" />
+      <workItem from="1687425901182" duration="2085000" />
+      <workItem from="1687428934656" duration="2327000" />
+      <workItem from="1687447987716" duration="4068000" />
     </task>
     <servers />
   </component>

@@ -26,14 +26,14 @@ function History(){
         })
     }
 
-    const role = (uid) =>{
-
-        if (uid == 'F3EBA01D'){
-            return 'เจ้าหน้าที่'
-        }else {
-            return 'ผู้ใช้งาน'
-        }
-    }
+    // const role = (uid) =>{
+    //
+    //     if (uid == 'F3EBA01D'){
+    //         return 'เจ้าหน้าที่'
+    //     }else {
+    //         return 'ผู้ใช้งาน'
+    //     }
+    // }
 
     function prePage(){
         if(currentPage !== 1){
@@ -73,7 +73,7 @@ function History(){
                             <td>{val.UID}</td>
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{role(val.UID)}</td>
+                            <td>{val.Role}</td>
                         </tr>
                         </tbody>
                     )

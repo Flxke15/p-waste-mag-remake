@@ -11,29 +11,23 @@ function Point(){
     const [roleUID,setRoleUID] = useState([]);
     const [status,setStatus] = useState([]);
 
-    useEffect(()=>{
+    const UpdateStatus = () => {
         axios.get("http://localhost:3001/getLastHistory").then((response) => {
             setLastHistory(response.data);
         }).then((response)=>{
-            lastHistory.map((valhis,key)=>{
-                axios.get(`http://localhost:3001/checkRole/${valhis.UID}`).then((response) => {
-                    setRoleUID(response.data);
-                }).then((response)=>{
-                    roleUID.map((val,key)=>{
-                        if (val.Role === 'C'){
-                            axios.put(`http://localhost:3001/updateStatusC/${valhis.Point}`).then((response) => {
-                                setStatus(response.data);
-                            })
-                        }else if (val.Role === 'U'){
-                            axios.put(`http://localhost:3001/updateStatusU/${valhis.Point}`).then((response) => {
-                                setStatus(response.data);
-                            })
-                        }
+            lastHistory.map((val,key)=>{
+                if (val.Role === 'C'){
+                    axios.put(`http://localhost:3001/updateStatusC/${val.Point}`).then((response) => {
+                        setStatus(response.data);
                     })
-                })
+                }else if (val.Role === 'U'){
+                    axios.put(`http://localhost:3001/updateStatusU/${val.Point}`).then((response) => {
+                        setStatus(response.data);
+                    })
+                }
             })
         })
-    })
+    }
 
 
     const showPoint = () =>{
@@ -75,6 +69,7 @@ function Point(){
 
         return(
             <div>
+                {UpdateStatus}
                 <table className='table'>
                     <thead>
                     <tr>
@@ -96,7 +91,7 @@ function Point(){
                                 <td>{val.Address}</td>
                                 <td>{val.Status}</td>
                                 <td><a href={val.Link} type='button' target='_blank' className='btn btn-primary'>Link</a></td>
-                                <td><button className='btn btn-danger' onClick={() => {deletePoint(val.ID)}} style={{marginBottom:2 +'em'}}>Delete</button></td>
+                                <td><button className='btn btn-danger' onClick={() => {deletePoint(val.Point)}} style={{marginBottom:2 +'em'}}>Delete</button></td>
                             </tr>
                             </tbody>
                         )

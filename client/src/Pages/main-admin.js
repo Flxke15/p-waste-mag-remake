@@ -83,6 +83,7 @@ function MainAdmin(){
                         <div className='row'>
                             <div>
                                 <a className='btn btn-success' href='/addUser' role='button' style={{width:'150px',marginRight:'10px'}}>AddUser</a>
+                                <a className='btn btn-warning' href='/addCollector' role='button' style={{width:'150px',marginRight:'10px'}}>AddCollector</a>
                                 <button className={'btn btn-primary'} onClick={() =>toggleShow(!show)} style={{textAlign:"center",width:'150px'}}>
                                     {show ? "Show User" : "Hide" }
                                 </button>

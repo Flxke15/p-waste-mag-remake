@@ -83,7 +83,7 @@ function HistoryGuest(){
                             {/*<td>{val.UID}</td>*/}
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{role(val.UID)}</td>
+                            <td>{val.Role}</td>
                             <td></td>
                         </tr>
                         </tbody>

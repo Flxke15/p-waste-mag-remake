@@ -119,6 +119,7 @@ app.get('/getLastHistory',(req,res) =>{
             res.send(result);
         }
     });
+
 });
 
 app.get('/checkRole/:uid',(req,res) =>{
@@ -173,6 +174,14 @@ app.post('/adduser', (req,res) => {
                 res.send("Adduser success")
             }
         });
+    db.query("UPDATE uid SET Role = ? WHERE UID = ?",['U',uid], (err,result) => {
+        if (err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    })
+
 })
 
 app.post('/addadmin', (req,res) => {
@@ -194,6 +203,32 @@ app.post('/addadmin', (req,res) => {
         });
 })
 
+app.post('/addcollector', (req,res) => {
+
+    const surname = req.body.surname;
+    const lastname = req.body.lastname;
+    const uid = req.body.uid;
+    const address = req.body.address;
+
+    db.query("INSERT INTO users (Surname,Lastname,UID,Address,Role) VALUES (?,?,?,?,?)",
+        [surname,lastname,uid,address,"C"],
+        (err,result) => {
+            if (err) {
+                console.log(err)
+            }else {
+                res.send("AddACollector success")
+            }
+        });
+    db.query("UPDATE uid SET Role = ? WHERE UID = ?",['C',uid], (err,result) => {
+        if (err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    })
+
+})
+
 app.post('/addPoint', (req,res) => {
 
     const point = req.body.point;
@@ -202,7 +237,7 @@ app.post('/addPoint', (req,res) => {
     const link = req.body.link;
 
     db.query("INSERT INTO scanpoint (Point,Name,Address,Status,Link) VALUES (?,?,?,?,?)",
-        [point,name,address,"First Register This PointOwner.",link],
+        [point,name,address,"First Register This Point.",link],
         (err,result) => {
             if (err) {
                 console.log(err)
@@ -227,7 +262,7 @@ app.delete('/deleteUser/:id', (req,res) => {
 app.delete('/deletePoint/:id', (req,res) => {
 
     const id = req.params.id;
-    db.query("DELETE FROM scanpoint where ID = ?",id,(err,result) => {
+    db.query("DELETE FROM scanpoint where Point = ?",id,(err,result) => {
         if (err){
             console.log(err);
         }else {

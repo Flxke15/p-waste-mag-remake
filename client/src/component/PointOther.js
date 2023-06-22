@@ -11,39 +11,37 @@ function PointOther(){
     const [roleUID,setRoleUID] = useState([]);
     const [status,setStatus] = useState([]);
 
-    useEffect(()=>{
+    const UpdateStatus = () => {
         axios.get("http://localhost:3001/getLastHistory").then((response) => {
             setLastHistory(response.data);
         }).then((response)=>{
-            lastHistory.map((valhis,key)=>{
-                axios.get(`http://localhost:3001/checkRole/${valhis.UID}`).then((response) => {
-                    setRoleUID(response.data);
-                }).then((response)=>{
-                    roleUID.map((val,key)=>{
-                        if (val.Role === 'C'){
-                            axios.put(`http://localhost:3001/updateStatusC/${valhis.Point}`).then((response) => {
-                                setStatus(response.data);
-                            })
-                        }else if (val.Role === 'U'){
-                            axios.put(`http://localhost:3001/updateStatusU/${valhis.Point}`).then((response) => {
-                                setStatus(response.data);
-                            })
-                        }
+            lastHistory.map((val,key)=>{
+                if (val.Role === 'C'){
+                    axios.put(`http://localhost:3001/updateStatusC/${val.Point}`).then((response) => {
+                        setStatus(response.data);
                     })
-                })
+                }else if (val.Role === 'U'){
+                    axios.put(`http://localhost:3001/updateStatusU/${val.Point}`).then((response) => {
+                        setStatus(response.data);
+                    })
+                }
             })
         })
-    })
-
-
+    }
     const showPoint = () =>{
         axios.get("http://localhost:3001/showPoint").then((response) =>{
             setPointList(response.data)
         })
     }
 
+    const refreshPage = () =>{
+        window.location.reload(false)
+    }
+
     return(
         <div>
+            {UpdateStatus}
+            <button className='btn btn-secondary' onClick={refreshPage}><i className="bi bi-arrow-clockwise"></i></button>
             <table className='table'>
                 <thead>
                 <tr>

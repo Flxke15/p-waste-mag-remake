@@ -14,6 +14,7 @@ function MainOwner(){
     const cookies = new Cookies();
     const navigate = useNavigate();
     const [name,setName] = useState({});
+    const [show,toggleShow] = useState(true)
 
     useEffect(()=>{
         const login = async () =>{
@@ -71,7 +72,19 @@ function MainOwner(){
                 <div className='row border' style={{padding:"20px"}}>
                     <div className='col'>
                         <h1>User Manage</h1>
-                        <a className='btn btn-success' href='/addadmin' role='button' style={{width:'150px',marginRight:'10px'}}>AddAdmin</a>
+                        <div className='row'>
+                            <div>
+                                <a className='btn btn-success' href='/addadmin' role='button' style={{width:'150px',marginRight:'10px'}}>AddAdmin</a>
+                                <button className={'btn btn-primary'} onClick={() =>toggleShow(!show)} style={{textAlign:"center",width:'150px'}}>
+                                    {show ? "Show User" : "Hide" }
+                                </button>
+                            </div>
+
+                            <br/><br/>
+                            {!show &&
+                                <UserList/>
+                            }
+                        </div>
                     </div>
                 </div>
 
