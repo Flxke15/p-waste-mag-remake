@@ -30,12 +30,11 @@ function HistoryGuest(){
     }
 
     const role = (uid) =>{
-
-        if (uid == 'F3EBA01D'){
-            return 'เจ้าหน้าที่'
-        }else {
-            return 'ผู้ใช้งาน'
-        }
+           if (uid === 'C'){
+               return 'เจ้าหน้าที่'
+           }else if (uid === 'U'){
+               return 'ผู้ใช้งาน'
+           }
     }
 
     // const timeUse = (dt) =>{
@@ -71,7 +70,6 @@ function HistoryGuest(){
                     <th scope='col'>Point</th>
                     <th scope='col'>DateTime</th>
                     <th scope='col'>User</th>
-                    <th scope='col'>TimeUse</th>
                 </tr>
                 </thead>
                 {showHistory()}
@@ -83,8 +81,7 @@ function HistoryGuest(){
                             {/*<td>{val.UID}</td>*/}
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{val.Role}</td>
-                            <td></td>
+                            <td>{role(val.Role)}</td>
                         </tr>
                         </tbody>
                     )

@@ -69,7 +69,7 @@ function Point(){
 
         return(
             <div>
-                {UpdateStatus}
+                {UpdateStatus()}
                 <table className='table'>
                     <thead>
                     <tr>
@@ -96,6 +96,7 @@ function Point(){
                             </tbody>
                         )
                     })}
+
                 </table>
             </div>
         )

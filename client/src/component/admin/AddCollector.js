@@ -94,6 +94,8 @@ function AddUser(){
                         address : address
                     }
                 ])
+            }).then(()=>{
+                axios.put(`http://localhost:3001/updateRoleUIDC/${uid}`)
             })
             //add role in uid
             Swal.fire({

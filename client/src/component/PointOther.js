@@ -40,7 +40,7 @@ function PointOther(){
 
     return(
         <div>
-            {UpdateStatus}
+            {UpdateStatus()}
             <button className='btn btn-secondary' onClick={refreshPage}><i className="bi bi-arrow-clockwise"></i></button>
             <table className='table'>
                 <thead>
