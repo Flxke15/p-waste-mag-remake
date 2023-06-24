@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="56279a26-0fce-4f1d-a4e4-6d07b09784fa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-owner.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-owner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Pages/main-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Pages/main-user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/Guest/History-Guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/Guest/History-Guest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/History.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/PointOther.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/PointOther.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/admin/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/admin/Point.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/component/owner/AddAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/component/owner/AddAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,23 +23,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "/Users/f1uke/Documents/Project Waste Management/p-wasteMag-ver2/client/src/component/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/f1uke/Documents/Project Waste Management/p-wasteMag-ver2/client/src/component/admin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/src/component/admin" />
@@ -71,7 +60,8 @@
       <workItem from="1687422521922" duration="43000" />
       <workItem from="1687425901182" duration="2085000" />
       <workItem from="1687428934656" duration="2327000" />
-      <workItem from="1687447987716" duration="4068000" />
+      <workItem from="1687447987716" duration="4216000" />
+      <workItem from="1687452226342" duration="37000" />
     </task>
     <servers />
   </component>

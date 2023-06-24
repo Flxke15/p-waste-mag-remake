@@ -171,17 +171,16 @@ app.post('/adduser', (req,res) => {
             if (err) {
                 console.log(err)
             }else {
-                res.send("Adduser success")
+                res.send(result)
+                // db.query("UPDATE uid SET Role = ? WHERE UID = ?",['U',uid], (err,result) => {
+                //     if (err){
+                //         console.log(err);
+                //     }else {
+                //         res.send(result);
+                //     }
+                // })
             }
-        });
-    db.query("UPDATE uid SET Role = ? WHERE UID = ?",['U',uid], (err,result) => {
-        if (err){
-            console.log(err);
-        }else {
-            res.send(result);
-        }
-    })
-
+        })
 })
 
 app.post('/addadmin', (req,res) => {
@@ -198,7 +197,7 @@ app.post('/addadmin', (req,res) => {
             if (err) {
                 console.log(err)
             }else {
-                res.send("AddAdmin success")
+                res.send(result)
             }
         });
 })
@@ -216,17 +215,33 @@ app.post('/addcollector', (req,res) => {
             if (err) {
                 console.log(err)
             }else {
-                res.send("AddACollector success")
+                res.send(result)
             }
-        });
-    db.query("UPDATE uid SET Role = ? WHERE UID = ?",['C',uid], (err,result) => {
-        if (err){
+        })
+})
+
+app.put('/updateRoleUIDC/:uid',(req,res) => {
+
+    const uid = req.params.uid;
+    db.query("UPDATE uid SET Role = ? WHERE UID = ?",["C",uid] , (err,result) => {
+        if (err) {
             console.log(err);
         }else {
             res.send(result);
         }
     })
+})
 
+app.put('/updateRoleUIDU/:uid',(req,res) => {
+
+    const uid = req.params.uid;
+    db.query("UPDATE uid SET Role = ? WHERE UID = ?",["U",uid] , (err,result) => {
+        if (err) {
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    })
 })
 
 app.post('/addPoint', (req,res) => {
@@ -307,7 +322,7 @@ app.get('/getUID',(req,res) =>{
 
 app.get('/getAllUID',(req,res) =>{
 
-    db.query("SELECT UID FROM UID", (err,result) => {
+    db.query("SELECT UID FROM uid", (err,result) => {
         if(err){
             console.log(err);
         }else {

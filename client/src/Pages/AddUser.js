@@ -49,11 +49,11 @@ function AddUser(){
         })
     },[getuid,uid])
 
-    // console.log(getalluid.length)
-    // console.log(lengthUID.length)
-    // console.log("state : " + state)
-    // console.log("getuid : " + getuid)
-    // console.log("uid : " + uid)
+     // console.log(getalluid.length)
+     // console.log(lengthUID.length)
+     // console.log("state : " + state)
+     // console.log("getuid : " + getuid)
+     // console.log("uid : " + uid)
 
     const GETUID = (e) => {
         e.preventDefault(false)
@@ -95,6 +95,8 @@ function AddUser(){
                         address : address
                     }
                 ])
+            }).then(()=>{
+                axios.put(`http://localhost:3001/updateRoleUIDU/${uid}`)
             })
             //add role in uid
             Swal.fire({

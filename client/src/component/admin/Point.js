@@ -81,7 +81,7 @@ function Point(){
                         <th scope='col'>Delete</th>
                     </tr>
                     </thead>
-                    {showPoint()}
+                    {showPoint}
                     {pointlist.map((val,key) => {
                         return(
                             <tbody>
@@ -96,6 +96,7 @@ function Point(){
                             </tbody>
                         )
                     })}
+
                 </table>
             </div>
         )

@@ -54,6 +54,7 @@ function UserList(){
                     <th scope='col'>Surname</th>
                     <th scope='col'>Lastname</th>
                     <th scope='col'>UID</th>
+                    <th scope='col'>Role</th>
                     <th scope='col'>Address</th>
                     <th scope='col'>Delete</th>
                 </tr>
@@ -66,6 +67,7 @@ function UserList(){
                                 <td scope='row'>{val.Surname}</td>
                                 <td>{val.Lastname}</td>
                                 <td>{val.UID}</td>
+                                <td>{val.Role}</td>
                                 <td>{val.Address}</td>
                                 <td><button className='btn btn-danger' onClick={() => {deleteUser(val.ID,val.UID)}} style={{marginBottom:2 +'em'}}>Delete</button></td>
                             </tr>

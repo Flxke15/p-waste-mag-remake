@@ -64,7 +64,7 @@ function History(){
                     <th scope='col'>User</th>
                 </tr>
                 </thead>
-                {showHistory()}
+                {showHistory}
                 {records.map((val,key) => {
                     return(
                         <tbody>
