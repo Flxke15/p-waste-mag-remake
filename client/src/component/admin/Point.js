@@ -53,6 +53,8 @@ function Point(){
                         })
                     )
                     window.location.reload(false);
+                }).then((response)=>{
+                    axios.delete(`http://localhost:3001/deletePointHistory/${id}`)
                 })
                 Swal.fire({
                     position: 'top-end',

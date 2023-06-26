@@ -284,7 +284,28 @@ app.delete('/deletePoint/:id', (req,res) => {
             res.send(result);
         }
     })
+        // db.query("DELETE FROM history where Point = ?",id,(err,result) => {
+        //     if (err){
+        //         console.log(err);
+        //     }else {
+        //         res.send(result);
+        //     }
+        // })
 })
+
+app.delete('/deletePointHistory/:id', (req,res) => {
+
+    const id = req.params.id;
+    db.query("DELETE FROM history where Point = ?",id,(err,result) => {
+        if (err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    })
+})
+
+
 
 app.delete('/deleteUIDFromUser/:uid', (req,res) => {
 
