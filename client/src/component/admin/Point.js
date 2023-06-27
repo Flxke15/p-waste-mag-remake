@@ -69,6 +69,16 @@ function Point(){
         })
     }
 
+    const ColorStatus = (status) => {
+        if (status === 'รอการดำเนินการ'){
+            return <td><p style={{color:"#F1C40F"}}>{status} <i className="bi bi-hourglass-split"></i></p></td>
+        }else if (status === 'ดำเนินการเสร็จเรียบร้อยแล้ว'){
+            return <td><p style={{color:"#27AE60"}}>{status} <i className="bi bi-check-square-fill"></i></p></td>
+        }else {
+            return <td><p>{status} <i className="bi bi-trash-fill"></i></p></td>
+        }
+    }
+
         return(
             <div>
                 {UpdateStatus()}
@@ -88,10 +98,10 @@ function Point(){
                         return(
                             <tbody>
                             <tr>
-                                <th scope='row'>{val.Point}</th>
-                                <td>{val.Name}</td>
-                                <td>{val.Address}</td>
-                                <td>{val.Status}</td>
+                                <th scope='row'><p>{val.Point}</p></th>
+                                <td><p>{val.Name}</p></td>
+                                <td><p>{val.Address}</p></td>
+                                {ColorStatus(val.Status)}
                                 <td><a href={val.Link} type='button' target='_blank' className='btn btn-primary'>Link</a></td>
                                 <td><button className='btn btn-danger' onClick={() => {deletePoint(val.Point)}} style={{marginBottom:2 +'em'}}>Delete</button></td>
                             </tr>

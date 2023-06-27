@@ -38,10 +38,20 @@ function PointOther(){
         window.location.reload(false)
     }
 
+    const ColorStatus = (status) => {
+        if (status === 'รอการดำเนินการ'){
+            return <td><p style={{color:"#F1C40F"}}>{status} <i className="bi bi-hourglass-split"></i></p></td>
+        }else if (status === 'ดำเนินการเสร็จเรียบร้อยแล้ว'){
+            return <td><p style={{color:"#27AE60"}}>{status} <i className="bi bi-check-square-fill"></i></p></td>
+        }else {
+            return <td><p>{status} <i className="bi bi-trash-fill"></i></p></td>
+        }
+    }
+
     return(
         <div>
             {UpdateStatus()}
-            <button className='btn btn-secondary' onClick={refreshPage}><i className="bi bi-arrow-clockwise"></i></button>
+            {/*<button className='btn btn-secondary' onClick={refreshPage}><i className="bi bi-arrow-clockwise"></i></button>*/}
             <table className='table'>
                 <thead>
                 <tr>
@@ -60,7 +70,7 @@ function PointOther(){
                             <th scope='row'>{val.Point}</th>
                             <td>{val.Name}</td>
                             <td>{val.Address}</td>
-                            <td>{val.Status}</td>
+                            {ColorStatus(val.Status)}
                             <td><a href={val.Link} type='button' target='_blank' className='btn btn-primary'>Link</a></td>
                         </tr>
                         </tbody>

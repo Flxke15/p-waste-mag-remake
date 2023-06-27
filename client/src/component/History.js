@@ -28,9 +28,9 @@ function History(){
 
     const role = (uid) =>{
         if (uid === 'C'){
-            return 'เจ้าหน้าที่'
+            return <td><p style={{color:"#27AE60"}}><i className="bi bi-person-fill"></i> เจ้าหน้าที่</p></td>
         }else if (uid === 'U'){
-            return 'ผู้ใช้งาน'
+            return <td><p style={{color:"#F1C40F"}}><i className="bi bi-person-fill"></i> ผู้ใช้งาน </p></td>
         }
     }
 
@@ -72,7 +72,7 @@ function History(){
                             <td>{val.UID}</td>
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{role(val.Role)}</td>
+                            {role(val.Role)}
                         </tr>
                         </tbody>
                     )
