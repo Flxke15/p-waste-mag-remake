@@ -64,7 +64,7 @@ function History(){
                 </tr>
                 </thead>
                 {showHistory()}
-                {records.map((val,key) => {
+                {records.map((val) => {
                     return(
                         <tbody>
                         <tr>

@@ -15,7 +15,7 @@ function PointOther(){
         axios.get("http://localhost:3001/getLastHistory").then((response) => {
             setLastHistory(response.data);
         }).then((response)=>{
-            lastHistory.map((val,key)=>{
+            lastHistory.map((val)=>{
                 if (val.Role === 'C'){
                     axios.put(`http://localhost:3001/updateStatusC/${val.Point}`).then((response) => {
                         setStatus(response.data);
@@ -63,7 +63,7 @@ function PointOther(){
                 </tr>
                 </thead>
                 {showPoint()}
-                {pointlist.map((val,key) => {
+                {pointlist.map((val) => {
                     return(
                         <tbody>
                         <tr>
