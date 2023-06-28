@@ -110,6 +110,19 @@ app.get('/showHistory',(req,res) =>{
     });
 });
 
+app.get('/getLastTime/:point',(req,res) =>{
+
+    const point = req.params.point;
+    db.query("SELECT Datetime FROM history WHERE Point = ? ORDER BY No DESC LIMIT 1",[point], (err,result) => {
+        if(err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    });
+
+});
+
 app.get('/getLastHistory',(req,res) =>{
 
     db.query("SELECT * FROM history ORDER BY No DESC LIMIT 1", (err,result) => {
@@ -354,7 +367,7 @@ app.get('/getAllUID',(req,res) =>{
 
 app.get('/getCountPoint1',(req,res) =>{
 
-    db.query("SELECT COUNT(Point) FROM history WHERE Point = 1", (err,result) => {
+    db.query("SELECT COUNT(Point) FROM history WHERE Point = 1 and Role = 'U'", (err,result) => {
         if(err){
             console.log(err);
         }else {
@@ -365,7 +378,7 @@ app.get('/getCountPoint1',(req,res) =>{
 
 app.get('/getCountPoint2',(req,res) =>{
 
-    db.query("SELECT COUNT(Point) FROM history WHERE Point = 2", (err,result) => {
+    db.query("SELECT COUNT(Point) FROM history WHERE Point = 2 and Role = 'U'", (err,result) => {
         if(err){
             console.log(err);
         }else {
@@ -376,7 +389,30 @@ app.get('/getCountPoint2',(req,res) =>{
 
 app.get('/getCountPoint3',(req,res) =>{
 
-    db.query("SELECT COUNT(Point) FROM history WHERE Point = 3", (err,result) => {
+    db.query("SELECT COUNT(Point) FROM history WHERE Point = 3 and Role = 'U'", (err,result) => {
+        if(err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    });
+})
+
+app.get('/getCountPoint/:point',(req,res) =>{
+
+    const point = req.params.point;
+    db.query("SELECT COUNT(Point) FROM history WHERE Point = ? and Role = ?",[point,'U'], (err,result) => {
+        if(err){
+            console.log(err);
+        }else {
+            res.send(result);
+        }
+    });
+})
+
+app.get('/selectPoints',(req,res) =>{
+
+    db.query("SELECT Point FROM scanpoint", (err,result) => {
         if(err){
             console.log(err);
         }else {
