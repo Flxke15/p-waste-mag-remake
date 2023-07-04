@@ -67,18 +67,18 @@ function MainAdmin(){
 
                     <div className='row'>
                         <div className='col border' >
-                            <h1 className='admin-point'>History</h1>
+                            <h1 className='admin-point'>ประวัติการใช้งาน</h1>
                             <History/>
                         </div>
                         <div className='col border'>
-                            <h1>Information</h1>
+                            <h1>เวลาการทำงาน</h1>
                             <Information/>
                         </div>
                     </div>
 
                     <div className='row border' style={{marginBottom:'20px'}}>
                         <div className='row' style={{padding:'20px'}}>
-                            <h1>User</h1>
+                            <h1>จัดการผู้ใช้งาน</h1>
                         </div>
                         <div className='row'>
                             <div>

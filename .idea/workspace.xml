@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="56279a26-0fce-4f1d-a4e4-6d07b09784fa" name="Changes" comment="" />
+=======
+    <list default="true" id="56279a26-0fce-4f1d-a4e4-6d07b09784fa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+=======
+>>>>>>> a9f80752b705578faf66f6e9d9fa58fedba916b2
+    </list>
+>>>>>>> 10a30d5ad6759b2fe6779154b773a84400ca2dbd
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "C:/Users/flxke/Desktop/Project101/Code/p-waste-mag-ver2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -36,6 +64,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> a9f80752b705578faf66f6e9d9fa58fedba916b2
   }
 }</component>
   <component name="RecentsManager">
@@ -58,9 +87,17 @@
       <workItem from="1687422521922" duration="43000" />
       <workItem from="1687425901182" duration="2085000" />
       <workItem from="1687428934656" duration="2327000" />
+<<<<<<< HEAD
+      <workItem from="1687447987716" duration="4068000" />
+      <workItem from="1687507133074" duration="285000" />
+=======
       <workItem from="1687447987716" duration="4216000" />
       <workItem from="1687452226342" duration="37000" />
+<<<<<<< HEAD
       <workItem from="1687600344184" duration="8945000" />
+=======
+>>>>>>> a9f80752b705578faf66f6e9d9fa58fedba916b2
+>>>>>>> 10a30d5ad6759b2fe6779154b773a84400ca2dbd
     </task>
     <servers />
   </component>

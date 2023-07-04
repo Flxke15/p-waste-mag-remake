@@ -47,13 +47,13 @@ function MainOwner(){
                 </div>
 
                 <div className='row border' style={{padding:"20px"}}>
-                    <h1>สรุปการใช้งาน</h1>
+                    <h1>ความถี่ในการใช้งาน</h1>
                     <Graph/>
                 </div>
 
                 <div className='row border style={{padding:"20px"}}'>
                     <div className='col border' style={{padding:"20px"}}>
-                        <h1>History</h1>
+                        <h1>ประวัติการใช้งาน</h1>
                         <History/>
                     </div>
                     <div className='col border' style={{padding:"20px"}}>
@@ -64,14 +64,14 @@ function MainOwner(){
 
                 <div className='row border' style={{padding:"20px"}}>
                     <div className='col'>
-                        <h1>Point</h1>
+                        <h1>จุดให้บริการ</h1>
                         <PointOther/>
                     </div>
                 </div>
 
                 <div className='row border' style={{padding:"20px"}}>
                     <div className='col'>
-                        <h1>User Manage</h1>
+                        <h1>จัดการผู้ใช้งาน</h1>
                         <div className='row'>
                             <div>
                                 <a className='btn btn-success' href='/addadmin' role='button' style={{width:'150px',marginRight:'10px'}}>AddAdmin</a>

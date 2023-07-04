@@ -1,15 +1,23 @@
 import React, {useState,useEffect} from "react";
 import Navbar from "../component/navbar";
-import Footer from "../component/footer";
 import axios from "axios";
 import Swal from "sweetalert2";
 import {Routes, Route, useNavigate} from 'react-router-dom';
-import {getValue} from "@testing-library/user-event/dist/utils";
+import Cookies from 'universal-cookie';
 
-function AddUser(){
+function AddPoint(){
+    const cookies = new Cookies();
+    const [nameCookie,setNameCookie] = useState({});
+    useEffect(()=>{
+        if (cookies.get('User') == undefined){
+            navigate('/login');
+        }else {
+            setNameCookie(cookies.get('User'));
+            //window.location.reload(true);
+        }
+    },[])
 
     const navigate = useNavigate();
-
     const [point,setPoint] = useState("");
     const [name,setName] = useState("");
     const [address,setAddress] = useState("");
@@ -114,4 +122,4 @@ function AddUser(){
     )
 }
 
-export default AddUser;
+export default AddPoint;

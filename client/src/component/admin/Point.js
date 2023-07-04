@@ -15,7 +15,7 @@ function Point(){
         axios.get("http://localhost:3001/getLastHistory").then((response) => {
             setLastHistory(response.data);
         }).then((response)=>{
-            lastHistory.map((val,key)=>{
+            lastHistory.map((val)=>{
                 if (val.Role === 'C'){
                     axios.put(`http://localhost:3001/updateStatusC/${val.Point}`).then((response) => {
                         setStatus(response.data);
@@ -53,6 +53,8 @@ function Point(){
                         })
                     )
                     window.location.reload(false);
+                }).then((response)=>{
+                    axios.delete(`http://localhost:3001/deletePointHistory/${id}`)
                 })
                 Swal.fire({
                     position: 'top-end',
@@ -67,9 +69,19 @@ function Point(){
         })
     }
 
+    const ColorStatus = (status) => {
+        if (status === 'รอการดำเนินการ'){
+            return <td><p style={{color:"#F1C40F"}}>{status} <i className="bi bi-hourglass-split"></i></p></td>
+        }else if (status === 'ดำเนินการเสร็จเรียบร้อยแล้ว'){
+            return <td><p style={{color:"#27AE60"}}>{status} <i className="bi bi-check-square-fill"></i></p></td>
+        }else {
+            return <td><p>{status} <i className="bi bi-trash-fill"></i></p></td>
+        }
+    }
+
         return(
             <div>
-                {UpdateStatus}
+                {UpdateStatus()}
                 <table className='table'>
                     <thead>
                     <tr>
@@ -81,16 +93,16 @@ function Point(){
                         <th scope='col'>Delete</th>
                     </tr>
                     </thead>
-                    {showPoint}
+                    {showPoint()}
                     {pointlist.map((val,key) => {
                         return(
                             <tbody>
                             <tr>
-                                <th scope='row'>{val.Point}</th>
-                                <td>{val.Name}</td>
-                                <td>{val.Address}</td>
-                                <td>{val.Status}</td>
-                                <td><a href={val.Link} type='button' target='_blank' className='btn btn-primary'>Link</a></td>
+                                <th scope='row'><p>{val.Point}</p></th>
+                                <td><p>{val.Name}</p></td>
+                                <td><p>{val.Address}</p></td>
+                                {ColorStatus(val.Status)}
+                                <td><a href={val.Link} type='button' target='_blank' className='btn btn-primary' style={{color:"black"}}>Link</a></td>
                                 <td><button className='btn btn-danger' onClick={() => {deletePoint(val.Point)}} style={{marginBottom:2 +'em'}}>Delete</button></td>
                             </tr>
                             </tbody>

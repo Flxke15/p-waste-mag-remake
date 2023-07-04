@@ -7,6 +7,7 @@ function UserList(){
 
     const navigate = useNavigate();
     const [userList,setUserList] = useState([]);
+
     const showUsers = () => {
         axios.get("http://localhost:3001/showUser").then((response) => {
             setUserList(response.data);

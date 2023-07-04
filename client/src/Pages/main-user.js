@@ -45,13 +45,13 @@ function MainUser(){
 
 
                 <div className='row border' style={{padding:"20px"}}>
-                    <h1>Point</h1>
+                    <h1>จุดให้บริการ</h1>
                     <PointOther/>
                 </div>
 
                 <div className='row border style={{padding:"20px"}}'>
                     <div className='col border' style={{padding:"20px"}}>
-                        <h1>History</h1>
+                        <h1>ประวัติการใช้งาน</h1>
                         <HistoryGuest/>
                     </div>
                     <div className='col border' style={{padding:"20px"}}>

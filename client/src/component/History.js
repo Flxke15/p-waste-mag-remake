@@ -26,14 +26,13 @@ function History(){
         })
     }
 
-    // const role = (uid) =>{
-    //
-    //     if (uid == 'F3EBA01D'){
-    //         return 'เจ้าหน้าที่'
-    //     }else {
-    //         return 'ผู้ใช้งาน'
-    //     }
-    // }
+    const role = (uid) =>{
+        if (uid === 'C'){
+            return <td><p style={{color:"#27AE60"}}><i className="bi bi-person-fill"></i> เจ้าหน้าที่</p></td>
+        }else if (uid === 'U'){
+            return <td><p style={{color:"#F1C40F"}}><i className="bi bi-person-fill"></i> ผู้ใช้งาน </p></td>
+        }
+    }
 
     function prePage(){
         if(currentPage !== 1){
@@ -64,8 +63,8 @@ function History(){
                     <th scope='col'>User</th>
                 </tr>
                 </thead>
-                {showHistory}
-                {records.map((val,key) => {
+                {showHistory()}
+                {records.map((val) => {
                     return(
                         <tbody>
                         <tr>
@@ -73,7 +72,7 @@ function History(){
                             <td>{val.UID}</td>
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{val.Role}</td>
+                            {role(val.Role)}
                         </tr>
                         </tbody>
                     )

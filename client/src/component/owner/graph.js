@@ -28,40 +28,40 @@ function Graph() {
         let two = parseInt(Object.values(count2[0] || {}).toString())
         let three = parseInt(Object.values(count3[0] || {}).toString())
         const dps = [];
-            dps.push({label: 1,y: one});
-            dps.push({label: 2,y: two});
-            dps.push({label: 3,y: three});
+        dps.push({label: 1,y: one});
+        dps.push({label: 2,y: two});
+        dps.push({label: 3,y: three});
         //console.log(dps)
         return dps;
     }
 
-        const options = {
-            animationEnabled: true,
-            exportEnabled: true,
-            theme: "light2", //"light1", "dark1", "dark2"
-            // title:{
-            //     text: "Summary of Waste Management"
-            // },
-            axisY: {
-                title: "Count"
-            },
-            axisX: {
-                title: "Scan Point"
-            },
-            data: [{
-                type: "column", //change type to bar, line, area, pie, etc
-                //indexLabel: "{y}", //Shows y value on all Data Points
-                indexLabelFontColor: "#5A5757",
-                indexLabelPlacement: "outside",
-                dataPoints: generateDataPoints()
-            }]
-        }
+    const options = {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light2", //"light1", "dark1", "dark2"
+        // title:{
+        //     text: "Summary of Waste Management"
+        // },
+        axisY: {
+            title: "Count"
+        },
+        axisX: {
+            title: "Scan Point"
+        },
+        data: [{
+            type: "column", //change type to bar, line, area, pie, etc
+            //indexLabel: "{y}", //Shows y value on all Data Points
+            indexLabelFontColor: "#5A5757",
+            indexLabelPlacement: "outside",
+            dataPoints: generateDataPoints()
+        }]
+    }
 
-        return (
-            <div>
-                <CanvasJSChart options = {options}/>
-            </div>
-        );
+    return (
+        <div>
+            <CanvasJSChart options = {options}/>
+        </div>
+    );
 }
 
 export default Graph;

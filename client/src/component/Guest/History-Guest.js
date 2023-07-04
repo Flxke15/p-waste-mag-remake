@@ -20,7 +20,14 @@ function HistoryGuest(){
     const npage = Math.ceil(historylist.length/recordsPerPage)
     const numbers = [...Array(npage+1).keys()].slice(1)
 
+    const [collectTime,setCollectTime] = useState([]);
+    const [ReportTime,setReportTime] = useState([]);
 
+    // const timeuse = (point) =>{
+    //     return (
+    //         <td>{point}</td>
+    //     )
+    // }
 
 
     const showHistory = () =>{
@@ -30,19 +37,14 @@ function HistoryGuest(){
     }
 
     const role = (uid) =>{
-
-        if (uid == 'F3EBA01D'){
-            return 'เจ้าหน้าที่'
-        }else {
-            return 'ผู้ใช้งาน'
-        }
+           if (uid === 'C'){
+               return (
+                   <td><p style={{color:"#27AE60"}}><i className="bi bi-person-fill"></i> เจ้าหน้าที่</p></td>
+               )
+           }else if (uid === 'U'){
+               return <td><p style={{color:"#F1C40F"}}><i className="bi bi-person-fill"></i> ผู้ใช้งาน </p></td>
+           }
     }
-
-    // const timeUse = (dt) =>{
-    //     if (uid == 'F3EBA01D'){
-    //         return 'use'
-    //     }
-    // }
 
     function prePage(){
         if(currentPage !== 1){
@@ -71,7 +73,7 @@ function HistoryGuest(){
                     <th scope='col'>Point</th>
                     <th scope='col'>DateTime</th>
                     <th scope='col'>User</th>
-                    <th scope='col'>TimeUse</th>
+                    {/*<th scope='col'>Time Use</th>*/}
                 </tr>
                 </thead>
                 {showHistory()}
@@ -83,8 +85,8 @@ function HistoryGuest(){
                             {/*<td>{val.UID}</td>*/}
                             <td>{val.Point}</td>
                             <td>{dateFormat(val.Datetime,"yyyy-mm-dd hh:mm:ss tt")}</td>
-                            <td>{val.Role}</td>
-                            <td></td>
+                            {role(val.Role)}
+                            {/*{timeuse(val.Point)}*/}
                         </tr>
                         </tbody>
                     )
